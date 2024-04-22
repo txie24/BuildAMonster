@@ -73,8 +73,8 @@ class Monster extends Phaser.Scene {
         my.sprite.Rhorn = this.add.sprite(this.RhornX, this.RhornY, "monsterParts", "detail_red_horn_large.png");
 
         // Mouth
-        my.sprite.mouth = this.add.sprite(this.mouthX, this.mouthY, "monsterParts", "mouthD.png");
-        my.sprite.defaultMouth = "mouthD.png";
+        my.sprite.mouth = this.add.sprite(this.mouthX, this.mouthY, "monsterParts", "mouthC.png");
+        my.sprite.defaultMouth = "mouthC.png";
         my.sprite.smileMouth = "mouth_closed_happy.png";
         my.sprite.fangsMouth = "mouth_closed_fangs.png";
 
@@ -97,14 +97,6 @@ class Monster extends Phaser.Scene {
 
         this.input.keyboard.on('keydown-F', () => {
             my.sprite.mouth.setTexture('monsterParts', my.sprite.fangsMouth);
-        });
-
-        this.input.keyboard.on('keyup-S', () => {
-            my.sprite.mouth.setTexture('monsterParts', my.sprite.defaultMouth);
-        });
-
-        this.input.keyboard.on('keyup-F', () => {
-            my.sprite.mouth.setTexture('monsterParts', my.sprite.defaultMouth);
         });
     }
 }
