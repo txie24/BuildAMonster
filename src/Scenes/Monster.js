@@ -14,6 +14,12 @@ class Monster extends Phaser.Scene {
         this.ReyeX = this.bodyX +40;
         this.ReyeY = this.bodyY -20;
 
+        this.RhornX = this.bodyX +55;
+        this.RhornY = this.bodyY -75;
+
+        this.LhornX = this.bodyX -55;
+        this.LhornY = this.bodyY -75;
+
         this.leftlegX = this.bodyX - 60;
         this.leftlegY = this.bodyY + 130;
 
@@ -61,9 +67,10 @@ class Monster extends Phaser.Scene {
         my.sprite.Leyes = this.add.sprite(this.LeyeX, this.LeyeY, "monsterParts", "eye_psycho_dark.png");
         my.sprite.Reyes = this.add.sprite(this.ReyeX, this.ReyeY, "monsterParts", "eye_psycho_dark.png");
 
-        
-
-
+        //horn
+        my.sprite.Lhorn = this.add.sprite(this.LhornX, this.LhornY, "monsterParts", "detail_red_horn_large.png");
+        my.sprite.Lhorn.flipX = true;
+        my.sprite.Rhorn = this.add.sprite(this.RhornX, this.RhornY, "monsterParts", "detail_red_horn_large.png");
 
         // Mouth
         my.sprite.mouth = this.add.sprite(this.mouthX, this.mouthY, "monsterParts", "mouthD.png");
